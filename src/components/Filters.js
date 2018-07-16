@@ -1,12 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 class Filters extends React.Component {
-
   constructor() {
     super();
 
   }
-
 
   handleChange = (event) => {
     this.props.onChangeType(event.target.value)
@@ -21,7 +19,8 @@ class Filters extends React.Component {
       <div className="ui form">
         <h3>Animal type</h3>
         <div className="field">
-          <select name="type" id="type" value={this.props.filter.type} onChange={this.handleChange}>
+
+          <select name="type" id="type" value={this.props.filters.type} onChange={this.handleChange}>
             <option value="all">All</option>
             <option value="cat">Cats</option>
             <option value="dog">Dogs</option>
@@ -33,8 +32,8 @@ class Filters extends React.Component {
           <button className="ui secondary button" onClick={this.handleFindPets}>Find pets</button>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Filters
+export default Filters;
