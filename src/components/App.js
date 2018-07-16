@@ -36,6 +36,12 @@ class App extends React.Component {
     fetch(url)
   }
 
+  onAdoptPet = (petId) => {
+  this.setState(prevState => ({
+    adoptedPets: [...prevState.adoptedPets, petId]
+  }))
+}
+
 
   render() {
     return (
