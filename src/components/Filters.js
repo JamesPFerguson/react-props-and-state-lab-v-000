@@ -4,7 +4,7 @@ class Filters extends React.Component {
   constructor() {
     super();
 
-    this.state = {type: ""}
+    this.props = {type: ""}
   }
 
   handleChange = (event) => {
